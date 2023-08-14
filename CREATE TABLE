@@ -1,0 +1,13 @@
+def save_sqlite(title, data):
+    conn = sqlite3.connect("data.db")
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE items (title TEXT, price TEXT)")
+    for item in data:
+        cursor.execute("INSERT INTO items VALUES (?, ?)", item)
+    conn.commit()
+    conn.close()
+ 
+ 
+title, data = get_data()
+save_csv(title, data)
+save_sqlite(title, data)
