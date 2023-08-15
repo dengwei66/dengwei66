@@ -1,0 +1,10 @@
+template <class K, class V>
+	class HashTable
+	{
+	public:
+ 
+    private:
+		vector<HashDate<K, V>> _tables;
+		size_t _n = 0;  
+ 
+	};
