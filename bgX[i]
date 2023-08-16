@@ -1,0 +1,39 @@
+void fly()
+{
+for(int i = 0 ;i <3 ;i++)
+{
+    // same speed
+    bgX[i] -= 2;
+    if(bgX[i] < -WIN_WINDTH)
+    {
+        bgX[i] = 0;
+    }
+    
+}
+ 
+    
+    //
+    if(heroJump)
+    {
+        
+        
+		if(heroY < JumpHeightMax)
+        {
+				//
+             heroJumpOff = 4;
+            
+        }
+        
+      heroY += heroJumpOff;
+        
+     if(heroY > 345 - imgHeros[0].getheight())
+     {
+ 		heroJump = false;
+      heroJumpOff = -4;
+    }          
+    }
+    else {
+          heroIndex = (heroIndex + 1)%12;  
+    }
+
+}
